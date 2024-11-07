@@ -29,3 +29,9 @@ while( divisible % 3 === 0 && divisible % 5 === 0){
 }
 
 // If a number is not divisible by either 3 or 5, log the number.
+let n = 113
+
+while( n % 3 !== 0 && n % 5 !== 0){
+    console.log(n)
+    break;
+}
