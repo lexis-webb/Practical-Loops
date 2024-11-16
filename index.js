@@ -29,9 +29,40 @@ while( divisible % 3 === 0 && divisible % 5 === 0){
 }
 
 // If a number is not divisible by either 3 or 5, log the number.
-let n = 113
+let z = 113
 
-while( n % 3 !== 0 && n % 5 !== 0){
-    console.log(n)
+while( z % 3 !== 0 && z % 5 !== 0){
+    console.log(z)
     break;
 }
+
+// Part 2
+// Declare an arbitrary number, n.
+// Create a loop that searches for the next prime number, starting at n and incrementing from there.
+// As soon as you find the prime number, log that number and exit the loop.
+
+
+function PrimeNum (num){
+    if (num <= 1) return false;
+    if (num <= 3) return true;
+    if (num % 2 === 0 || num % 3 === 0 ) return false;
+
+    
+    for (let p = 5; p * p <= n; p += 6){
+        if (num % p === 0 || num % (p + 2) === 0) return false;
+    }
+    return true;
+}
+function nextNum (n){
+    let num = n;
+    while (true){
+        if (PrimeNum(num)){
+            console.log(num);
+            break;
+        }
+        num ++;
+    }
+}   
+let n = 12
+nextNum(n);
+
